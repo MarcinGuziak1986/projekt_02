@@ -9,17 +9,11 @@ let final_result = ''
 $(document).ready(function () {
 
     function erase() {
-        $("#operator_add").css('display', 'none');
-        $("#operator_subtract").css('display', 'none');
-        $("#operator_multiply").css('display', 'none');
-        $("#operator_divide").css('display', 'none');
+        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").hide();
     }
 
     function show() {
-        $("#operator_add").css('display', 'inline');
-        $("#operator_subtract").css('display', 'inline');
-        $("#operator_multiply").css('display', 'inline');
-        $("#operator_divide").css('display', 'inline');
+        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").css('display', 'inline');
     }
 
     function calculate(operator, a, b) {
@@ -154,7 +148,7 @@ $(document).ready(function () {
                 operator = ''
                 global_result = ''
                 final_result = ''
-                erase()
+                show()
                 break
         }      
     })
