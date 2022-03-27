@@ -29,6 +29,7 @@ $(document).ready(function () {
         }
     }
 
+    // keyboard try
     // window.addEventListener('keydown', function(event) {
     //     switch (event.keyCode) {
     //         case 49:
@@ -200,6 +201,12 @@ $(document).ready(function () {
             case 'digit_0':
                 $("#global_result").html(Number(result + '0'));
                 result = result + '0'
+                global_result = Number(result)
+                break
+            
+            case 'coma':
+                $("#global_result").html(String(result + '.'));
+                result = result + '.'
                 global_result = Number(result)
                 break
             
