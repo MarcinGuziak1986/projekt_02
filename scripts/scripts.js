@@ -9,11 +9,11 @@ let final_result = ''
 $(document).ready(function () {
 
     function erase() {
-        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").hide();
+        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").prop( "disabled", true);
     }
 
     function show() {
-        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").css('display', 'inline');
+        $("#operator_add, #operator_subtract, #operator_multiply, #operator_divide").prop( "disabled", false);
     }
 
     function calculate(operator, a, b) {
